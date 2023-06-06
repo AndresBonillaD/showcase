@@ -1,9 +1,13 @@
+---
+weight: 2
+---
+
 p5 `div` [shortcodes](https://gohugo.io/content-management/shortcodes/) embed [p5.js](https://p5js.org/) code within a [div element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/div). There are two p5 `div` shortcodes: [p5-div](#p5-div) and [p5-instance-div](#p5-instance-div).
 
 # p5-div
 
 ```html
-{{</* p5-div ver="1.4.1" sketch="/path/to/sketch.js" lib1="https://cdntolib1/lib1.js" */>}}
+{{</* p5-div ver="1.6.0" sketch="/path/to/sketch.js" lib1="https://cdntolib1/lib1.js" */>}}
 ```
 
 All parameters are optional but `sketch`. Default values are shown in the above snippet but for `libs*`. Up to `lib5` libs may be specified.
@@ -13,9 +17,9 @@ All parameters are optional but `sketch`. Default values are shown in the above 
 Look at [this](https://mathworld.wolfram.com/ScintillatingGridIllusion.html) and also [this](https://www.illusionsindex.org/i/scintillating-grid) among many more references there are.
 
 {{< details title="p5-div markdown" open=false >}}
-```html
+{{< highlight html >}}
 {{</* p5-div sketch="/showcase/sketches/scintillating.js" */>}}
-```
+{{< /highlight >}}
 {{< /details >}}
 
 {{< p5-div sketch="/showcase/sketches/scintillating.js" >}}
@@ -23,7 +27,7 @@ Look at [this](https://mathworld.wolfram.com/ScintillatingGridIllusion.html) and
 # p5-instance-div
 
 ```html
-{{</* p5-instance-div id="sketchid" ver="1.4.1" lib1="https://cdntolib1/lib1.js" >}}
+{{</* p5-instance-div id="sketchid" ver="1.6.0" lib1="https://cdntolib1/lib1.js" >}}
   // inline sketch code
 {{< /p5-instance-div */>}}
 ```
@@ -39,7 +43,7 @@ All parameters are optional but `id`. Default values are shown in the above snip
 Look at [this](https://en.wikipedia.org/wiki/Lilac_chaser) introductory reference.
 
 {{< details title="p5-instance-div markdown" open=false >}}
-```js
+{{< highlight md >}}
 {{</* p5-instance-div id="lilac-chaser" >}}
   // Adapted from [this](https://github.com/VisualComputing/Cognitive/blob/gh-pages/sketches/lilacChaser.js)
   let jump = 0;
@@ -91,7 +95,7 @@ Look at [this](https://en.wikipedia.org/wiki/Lilac_chaser) introductory referenc
     p5.pop();
   }
 {{< /p5-instance-div */>}}
-```
+{{< /highlight >}}
 {{< hint warning >}}
 Note that `p5` should be the name to be used for the sketch object variable.
 {{< /hint >}}
@@ -153,7 +157,7 @@ Note that `p5` should be the name to be used for the sketch object variable.
 Adapted from [here](https://p5js.org/examples/dom-video-canvas.html). Don't forget to checkout also the [video on dom](https://p5js.org/examples/dom-video.html) example.
 
 {{< details title="p5-instance-div markdown" open=false >}}
-```js
+{{< highlight md >}}
 {{</* p5-instance-div id="video" >}}
   let fingers;
 
@@ -176,7 +180,7 @@ Adapted from [here](https://p5js.org/examples/dom-video-canvas.html). Don't forg
     fingers.loop(); // set the video to loop and start playing  
   }
 {{< /p5-instance-div */>}}
-```
+{{< /highlight >}}
 {{< hint warning >}}
 Note that `p5` should be the name to be used for the sketch object variable.
 {{< /hint >}}
